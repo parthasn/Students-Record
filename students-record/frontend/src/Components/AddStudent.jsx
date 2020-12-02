@@ -49,7 +49,7 @@ export default class AddStudent extends React.Component {
       };
       
       axios(config)
-      .then(res => {this.props.history.push('/') })
+      .then(res => {this.props.history.push('/students') })
       .catch(function (error) {
         console.log(error);
       });
@@ -62,6 +62,7 @@ export default class AddStudent extends React.Component {
       <div
         style={{ margin: "auto", width: 350, position: "relative", top: 100 }}
       >
+        <h1>Add a Student</h1>
         <form>
           <div>
             <TextField

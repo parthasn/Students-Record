@@ -49,7 +49,10 @@ export default class EditStudent extends React.Component {
     });
   };
 
+
+
   handleUpdate = () => {
+
     const { name, email, city, bloodGroup, imageLink, gender } = this.state;
     console.log("state",this.state)
 
@@ -73,7 +76,7 @@ export default class EditStudent extends React.Component {
 
     axios(config)
       .then((res) => {
-        this.props.history.push("/");
+        this.props.history.push("/students");
       })
       .catch((err) => alert(err));
   };
@@ -87,6 +90,7 @@ export default class EditStudent extends React.Component {
       <div
         style={{ margin: "auto", width: 350, position: "relative", top: 100 }}
       >
+        <h1>Edit Information</h1>
         <form>
           <div>
             <TextField
